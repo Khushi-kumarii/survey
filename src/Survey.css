@@ -1,0 +1,241 @@
+/* Survey.css */
+
+.appContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f8ff;
+}
+
+.welcomeContainer {
+    text-align: center;
+    padding: 50px;
+    background-color: #d7e3ec; /* Light blue background for the box */
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 500px;
+}
+
+.welcomeHeader {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.startButton {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #369c36; /* Light green background */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.startButton:hover {
+    background-color: #76c76a; /* Darker green on hover */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #d0e1fd; /* Light sky blue background */
+    border-radius: 15px;
+    width: 750px;
+    height: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+.header {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.questionNumber {
+    font-size: 18px;
+    color: gray;
+    padding-left: 80%;
+}
+
+.questionText {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-top: 8%;
+}
+
+.ratingButton {
+    margin: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+.buttonContainer {
+    margin-top: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.prevButton, .nextButton, .skipButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.prevButton {
+    background-color: blue;
+}
+
+.skipButton {
+    background-color: grey;
+}
+
+.nextButton {
+    background-color: rgb(182, 59, 100);
+}
+
+.confirmationDialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.confirmButton, .cancelButton {
+    padding: 10px 20px;
+    margin: 5px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirmButton {
+    background-color: rgb(43, 175, 43);
+}
+
+.cancelButton {
+    background-color: rgb(219, 27, 27);
+}
+
+.thankYouMessage {
+    font-size: 24px;
+    color: rgb(46, 71, 185);
+    text-align: center;
+    margin-top: 50px;
+}
+/* For screens smaller than 768px (tablets and below) */
+@media (max-width: 768px) {
+    .welcomeContainer {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .container {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .header {
+        font-size: 20px;
+    }
+
+    .questionText {
+        font-size: 18px;
+    }
+
+    .ratingButton {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .textarea {
+        font-size: 14px;
+    }
+
+    .buttonContainer {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .prevButton, .nextButton, .skipButton {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    .thankYouMessage {
+        font-size: 20px;
+    }
+}
+
+/* For screens smaller than 480px (phones) */
+@media (max-width: 480px) {
+    .welcomeContainer {
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .header {
+        font-size: 18px;
+    }
+
+    .questionText {
+        font-size: 16px;
+    }
+
+    .ratingButton {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .buttonContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prevButton, .nextButton, .skipButton {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    .thankYouMessage {
+        font-size: 18px;
+    }
+}

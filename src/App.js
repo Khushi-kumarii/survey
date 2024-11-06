@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Survey from './component/Survey';
+import './Survey.css';
 
-function App() {
+const App = () => {
+  const [startSurvey, setStartSurvey] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="appContainer">
+      {!startSurvey ? (
+        <div className="welcomeContainer">
+          <h1 className="welcomeHeader">Welcome to the Customer Survey</h1>
+          <button onClick={() => setStartSurvey(true)} className="startButton">Start</button>
+        </div>
+      ) : (
+        <Survey />
+      )}
     </div>
   );
-}
+};
 
 export default App;
